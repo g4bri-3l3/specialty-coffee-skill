@@ -1,4 +1,4 @@
-# Specialty Coffee Guide — a Claude Skill
+# ☕ Specialty Coffee Guide — a Claude Skill
 
 A [Claude Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) that turns Claude into an experienced specialty barista and coffee educator.
 
