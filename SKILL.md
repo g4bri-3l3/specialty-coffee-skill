@@ -86,23 +86,27 @@ General ranges (Honest Coffee Guide, particle size in microns, treat as starting
 
 Labels: extra fine 0 to 200, fine 200 to 400, medium fine 400 to 600, medium 600 to 800, medium coarse 800 to 1000, coarse 1000 to 1200, extra coarse 1200 to 1400 µm.
 
-### 1Zpresso grinders (official adjustment data)
+### 1Zpresso grinders (official adjustment data, 1zpresso.coffee/grind-setting, page dated 2020-10-20)
 
-Find zero first: turn finer until the burrs touch and the crank barely turns (on external dials note where the indicator sits). The first clicks past zero may produce slight burr contact; never grind with burrs rubbing. Settings are counted from zero and only meaningful for the same model.
+Finding zero, in 1Zpresso's own words: on **internal and top** designs, turn the dial clockwise "until you feel resistance and the crank handle is unable to move drastically, that is the zero setting"; on **external** designs, note where the red dot points at the indicator at that same point. 1Zpresso warns that the outer ring and burr have slight tolerance, so "the first few clicks may result in slight contact", and that "continuous contact can damage the burr set". Never grind with the burrs rubbing. Settings are counted from zero and are only meaningful within the same model.
 
-| Model | Adjustment | Clicks per rotation | Clicks per number | µm per click |
-|---|---|---|---|---|
-| Q series, J, JE | internal | 30 | 3 | 25 |
-| JX Pro S, JE Plus | top | 40 | 4 | 12.5 |
-| X Pro S, X Ultra | external | 60 | 10 | 12.5 |
-| J Max S | external | 90 | 10 | 8.8 |
-| J Ultra | external | 100 | 10 | 8 |
-| K Plus, K Pro, K Max, ZP6 Special | external | 90 | 10 | 22 |
-| K Ultra | external | 100 | 10 | 20 |
+This whole table is 1Zpresso's published data, including the clicks per rotation and the µm per click. Note the **numbers per rotation** column: it is 9 on the K-Max/K-Plus/K-Pro and J-Max, but 10 on the K-Ultra and J-Ultra, so the same written setting does not mean the same thing across the two groups.
 
-The µm-per-click figures for K Ultra (20), J Ultra (8), X Ultra (12.5) and J Max (8.8) are on 1Zpresso's own pages. K Plus / K Pro / K Max (22 µm) and the older internal-adjustment models are community-verified rather than listed officially, and the clicks-per-rotation for the K Max is reported as both 90 and 60 depending on the source: have the user count it on their own grinder before converting settings.
+| Model | Adjustment | Numbers per rotation | Clicks per rotation | Clicks per number | µm per click |
+|---|---|---|---|---|---|
+| Q series, J, JE | internal | 10 | 30 | 3 | 25 |
+| JX-Pro S, JE-Plus | top | 10 | 40 | 4 | 12.5 |
+| X-Pro S, X-Ultra | external | 6 | 60 | 10 | 12.5 |
+| J-Max S | external | 9 | 90 | 10 | 8.8 |
+| J-Ultra | external | 10 | 100 | 10 | 8 |
+| K-Plus, K-Pro, K-Max, ZP6 Special | external | 9 | 90 | 10 | 22 |
+| K-Ultra | external | 10 | 100 | 10 | 20 |
 
-Notation "R.N.C" means rotation.number.click, e.g. K-Ultra 0.7.5 = 75 clicks from zero. Starting ranges (Honest Coffee Guide and user consensus):
+1Zpresso's page states µm per click in millimetres (0.022 mm = 22 µm); it carries **no brew-method recommendations at all**, and it predates the newest models, so for a grinder not in the table have the user count numbers and clicks per rotation on their own unit rather than assuming.
+
+1Zpresso does not use the "R.N.C" notation. Its own way of writing a setting is rotations or numbers plus clicks, with the total in brackets: K-Ultra "6.5 numbers = turn clockwise to #6 and 5 clicks. (65 clicks)", J-Ultra "1.5 rotations = turn clockwise a round and 5 numbers. (150 clicks)". When the user quotes a setting, the safest common ground is **total clicks from zero**, since that is unambiguous: convert to µm by multiplying by the µm per click above.
+
+Notation "R.N.C" (rotation.number.click) is community shorthand, not 1Zpresso's, e.g. K-Ultra 0.7.5 = 75 clicks from zero. Starting ranges below are community data (Honest Coffee Guide and user consensus), not from 1Zpresso:
 * **K Ultra** (20 µm/click): espresso 0.2.4 to 0.5.0 (start near 0.3.0); moka 0.4.8 to 0.8.6 (start near 0.5.5 to 6.0); AeroPress 0.4.3 to 1.2.6 (typical 5.5 to 7.0); V60 0.5.3 to 0.9.2 (typical 7.0 to 8.5, light roasts often 7.0 to 7.8); French press 0.9.1 to 1.7.0. Very popular all rounder, slightly more fines than pour over specialist burrs, so it gives body.
 * **K Plus / K Pro / K Max** (22 µm/click): V60 0.4.9 to 0.8.4; moka 0.4.4 to 0.7.9; AeroPress 0.3.9 to 1.2.5; pour over 0.5.0 to 1.2.1; French press 0.8.4 to 1.6.6; cold brew 1.0.7 to 1.7.0. Espresso roughly 0.2.0 to 0.4.0.
 * **J Ultra / J Max**: espresso focused, very fine steps; espresso roughly 1 to 1.5 rotations on J Max, adjust to taste.
