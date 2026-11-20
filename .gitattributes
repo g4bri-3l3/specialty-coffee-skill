@@ -1,0 +1,4 @@
+# Keep LF in the working copy on every platform: SKILL.md is zipped verbatim
+# into the .skill bundle, so line endings must not drift per-clone.
+* text=auto eol=lf
+*.skill binary

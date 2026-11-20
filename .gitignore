@@ -1,0 +1,8 @@
+# Windows / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+*~
+
+# Local authoring notes, not part of the published skill
+CLAUDE.md
