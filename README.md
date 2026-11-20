@@ -76,3 +76,9 @@ The knowledge is distilled from James Hoffmann, European Coffee Trip's V60 recip
 ## Contributing
 
 Corrections and additions are welcome — especially grinder data (µm per click, with the grinder model and how you measured it) and recipes with a named, linkable source. Please edit `SKILL.md`, repack the `.skill`, and keep the provenance labelling intact.
+
+## License
+
+[CC BY 4.0](LICENSE) — reuse, adapt and redistribute freely, including commercially, as long as you give credit.
+
+This covers the text of the skill as written here. The underlying brewing data is attributed to its sources in the `Sources` section of `SKILL.md`: recipes and figures from James Hoffmann, Tetsu Kasuya, 1Zpresso, La Sosta Specialty Coffee and the others belong to them, and the license on this repo does not change that.
