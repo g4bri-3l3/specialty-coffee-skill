@@ -40,7 +40,7 @@ Render with the best tool the environment offers, in this order: a native chart 
 | Comparing recipes (Hoffmann vs 4:6 vs Osmotic vs Hybrid) | multi line chart of cumulative water over time, one series per recipe, normalised to the same dose if needed |
 | Grind size question | horizontal bar chart of µm ranges per method, highlighting the method asked about; optionally the user's setting converted to µm (clicks × µm per click) |
 | Ratio, dose or strength comparisons | bar chart (e.g. 4:6 pour sizes for brighter, balanced, sweeter) |
-| Extraction diagnosis or TDS/EY numbers | brew control chart: scatter, x = extraction yield (%), y = TDS (%), shaded ideal box (EY 18 to 22, TDS 1.15 to 1.45 for filter), user's point and an arrow toward the target |
+| Extraction diagnosis or TDS/EY numbers | brew control chart: scatter, x = extraction yield (%), y = TDS (%), shaded ideal box (EY 18 to 22, TDS 1.15 to 1.35 for filter), user's point and an arrow toward the target |
 | Tasting or comparing coffees | radar chart of attributes scored 0 to 10: aroma, acidity, sweetness, body, bitterness, aftertaste, clarity, balance |
 | Identifying flavours, learning to taste | aroma wheel sunburst built from the list in "Tasting and cupping", highlighting the categories that fit the coffee |
 | Cold brew ratio, steep time or concentrate dilution | bar chart of dilution ratios (neat, with milk, with tonic), or steep time on x against expected strength, shading the 16 to 20 h fridge window and the 12 to 16 h ambient window |
@@ -52,7 +52,7 @@ Skip the chart when there are no numbers or structure worth seeing (a yes/no ans
 
 * **Extraction**: water dissolves compounds in order: acids and fruity notes first, then sugars and sweetness, then bitter and astringent compounds. Under extraction tastes sour, salty, thin, with a short finish. Over extraction tastes bitter, dry, astringent, hollow. A cup can be both (channeling or uneven grind): sour AND bitter at once means unevenness, fix technique or grinder before grind size.
 * **Strength vs extraction**: strength (TDS) is set mainly by ratio; extraction yield (EY) mainly by grind, time, temperature, agitation. Watery but balanced: lower the ratio (more coffee). Strong but sour: extract more.
-* **Targets** (SCA brew control chart, filter): TDS 1.15% to 1.45%, EY 18% to 22%. Espresso: TDS roughly 8% to 12%, EY 18% to 22% (light roasts often 20% to 24%). EY = (beverage weight × TDS) / dose.
+* **Targets** (SCA brew control chart, filter): TDS 1.15% to 1.35%, EY 18% to 22%. Espresso: TDS roughly 8% to 12%, EY 18% to 22% (light roasts often 20% to 24%). EY = (beverage weight × TDS) / dose. The 18% to 22% / 1.15% to 1.35% box is the old SCA "Golden Cup" zone, derived from Lockhart's 1957 Coffee Brewing Institute work; it is a useful map, not a verdict, and plenty of excellent light-roast cups sit outside it.
 * **Levers that raise extraction**: finer grind, hotter water, longer contact time, more agitation, higher ratio (more water), softer but buffered water, fresher roast that has finished degassing.
 * **Fines and evenness** matter as much as average size. Better grinders produce fewer fines and allow finer grinding without clogging or bitterness.
 * **Freshness**: CO2 resists extraction. Medium roasts are usually best 7 to 30 days after roast, light roasts often 2 to 6 weeks. Store airtight, away from light; freeze in single dose airtight containers for long storage and grind straight from frozen.
@@ -60,7 +60,8 @@ Skip the chart when there are no numbers or structure worth seeing (a yes/no ans
 ## Water
 
 Water is roughly 98% of filter coffee and strongly affects acidity and sweetness.
-* Aim for general hardness around 50 to 100 ppm as CaCO3 and alkalinity (KH) around 30 to 50 ppm. Too much alkalinity (buffer) flattens acidity, typical of hard tap water; too little makes the cup sharp and sour.
+* Official SCA water targets, for reference: total TDS around 150 mg/l (acceptable 75 to 250), total alkalinity around 40 mg/l as CaCO3, calcium hardness around 68 mg/l as CaCO3 (roughly 17 to 85), pH 6.5 to 7.5, no chlorine.
+* In practice most specialty brewers aim a little softer than that: general hardness around 50 to 100 ppm as CaCO3 and alkalinity (KH) around 30 to 50 ppm. Too much alkalinity (buffer) flattens acidity, typical of hard tap water; too little makes the cup sharp and sour.
 * Good options: filtered tap water if soft, low mineral bottled water (in Italy look for a low "residuo fisso", roughly 50 to 150 mg/l, and low bicarbonate), Third Wave Water sachets, or DIY recipes (magnesium sulfate plus sodium bicarbonate in distilled water, e.g. Barista Hustle or Rao/Perger recipes).
 * Never use distilled or RO water alone: flat and sour, and it damages espresso boilers. Very hard water scales espresso machines.
 * For espresso machines, follow the manufacturer's water spec to avoid scale and corrosion.
@@ -98,6 +99,8 @@ Find zero first: turn finer until the burrs touch and the crank barely turns (on
 | J Ultra | external | 100 | 10 | 8 |
 | K Plus, K Pro, K Max, ZP6 Special | external | 90 | 10 | 22 |
 | K Ultra | external | 100 | 10 | 20 |
+
+The µm-per-click figures for K Ultra (20), J Ultra (8), X Ultra (12.5) and J Max (8.8) are on 1Zpresso's own pages. K Plus / K Pro / K Max (22 µm) and the older internal-adjustment models are community-verified rather than listed officially, and the clicks-per-rotation for the K Max is reported as both 90 and 60 depending on the source: have the user count it on their own grinder before converting settings.
 
 Notation "R.N.C" means rotation.number.click, e.g. K-Ultra 0.7.5 = 75 clicks from zero. Starting ranges (Honest Coffee Guide and user consensus):
 * **K Ultra** (20 µm/click): espresso 0.2.4 to 0.5.0 (start near 0.3.0); moka 0.4.8 to 0.8.6 (start near 0.5.5 to 6.0); AeroPress 0.4.3 to 1.2.6 (typical 5.5 to 7.0); V60 0.5.3 to 0.9.2 (typical 7.0 to 8.5, light roasts often 7.0 to 7.8); French press 0.9.1 to 1.7.0. Very popular all rounder, slightly more fines than pour over specialist burrs, so it gives body.
@@ -144,7 +147,7 @@ General guidance:
 * Five equal pours of 50 g: bloom 50 g at 0:00 with a swirl, then further 50 g pulses roughly every 20 to 30 s (about 0:45, 1:10, 1:30, 1:50), gentle swirl after the last pour. Target total time about 3:00. If the user needs exact timings, suggest the video.
 
 ### Recipe 3: Tetsu Kasuya 4:6 method (2016 World Brewers Cup champion)
-* 20 g coffee, coarse grind (coarser than other V60 recipes, near French press fine end), 300 g water at about 92 to 93 °C for light roasts (Kasuya suggests cooler for darker roasts, around 88 °C medium, 83 °C dark), ratio 1:15.
+* 20 g coffee, coarse grind (coarser than other V60 recipes, near French press fine end), 300 g water, ratio 1:15. His 2016 World Brewers Cup winning recipe was 20 g to 300 g at **92 °C**, about 3:00 of extraction. The "93 °C light / 88 °C medium / 83 °C dark" split often quoted for this method is a widely repeated secondary summary, not a figure traceable to Kasuya himself, and sources disagree (some give 94 °C light, some put dark below 80 °C): treat it as a rule of thumb, start at 92 to 93 °C for light roasts and go cooler as the roast darkens.
 * Standard: five pours of 60 g each, every 45 s: 0:00, 0:45, 1:30, 2:15, 3:00; remove the dripper at 3:45.
 * The first 40% (pours 1 and 2, 120 g) controls the sweetness/acidity balance: smaller first pour then larger second (e.g. 50 then 70) gives a sweeter cup; larger first then smaller (70 then 50) gives more acidity.
 * The last 60% (180 g) controls strength: more, smaller pours give a stronger cup; fewer, bigger pours a lighter one.
@@ -540,7 +543,7 @@ How to use it:
 ## Safety notes
 * Moka pot: never fill water above the safety valve, never tamp hard, never leave unattended on high heat. If steam escapes from the valve, remove from heat.
 * Hot water and steam wands cause burns; purge away from hands.
-* Caffeine: about 60 to 100 mg per espresso, 100 to 200 mg per mug of filter. Healthy adults: up to about 400 mg/day (EFSA/FDA guidance); lower during pregnancy (about 200 mg/day).
+* Caffeine: about 60 to 100 mg per espresso, 100 to 200 mg per mug of filter. EFSA (2015 opinion) considers safe for healthy adults up to **400 mg per day** and up to **200 mg in a single dose** (that single dose limit is the one people miss: two strong filter mugs back to back can reach it). During pregnancy, habitual intake up to **200 mg per day** from all sources combined. FDA guidance converges on the 400 mg daily figure for healthy adults. Caffeine from tea, cola, energy drinks, chocolate and supplements counts toward the same total.
 
 ## Sources (cite when the user wants to dig deeper)
 * James Hoffmann, YouTube: https://www.youtube.com/@jameshoffmann (Ultimate V60 Technique, A Better 1 Cup V60, Ultimate AeroPress, French press technique, moka pot series, water series, espresso and grinder reviews)
@@ -558,6 +561,9 @@ How to use it:
 * Honest Coffee Guide (grind size charts, per grinder settings, brew recipes, moka pot articles, drink guides): https://honestcoffeeguide.com/
 * La Sosta Specialty Coffee (Italian roaster) brewing guides, each page linking a PDF: V60 https://lasosta.coffee/en/pages/guida-v60-come-preparare-il-caffe-filtro-a-casa, iced V60 / Japanese iced coffee https://lasosta.coffee/en/pages/japanese-iced-coffee-con-v60-come-preparare-il-caffe-filtro-freddo-a-casa, cold brew https://lasosta.coffee/en/pages/guida-cold-brew-come-preparare-un-caffe-freddo-specialty-a-casa, moka https://lasosta.coffee/en/pages/guida-moka (guides are in Italian; the recipe text lives in the linked PDF, not in the page itself)
 * Complete Home Barista, moka pot grind size FAQ (flow character as the grind diagnostic: steady stream vs bursts vs rushing): https://completehomebarista.com/faqs/brewing-methods/moka-pot/moka-pot-grind-size/
+* SCA standards (brewing control chart / Golden Cup, water quality): https://sca.coffee/research/coffee-standards
+* EFSA Scientific Opinion on the safety of caffeine (2015), source of the 400 mg/day, 200 mg single dose and 200 mg/day in pregnancy figures: https://www.efsa.europa.eu/en/efsajournal/pub/4102
+* Hario official James Hoffmann V60 recipe (confirms the 2× dose bloom and pour timings): https://www.hario-usa.com/blogs/recipes-and-more-from-friends/james-hoffmann-uitimate-v60-technique
 * Reddit communities: https://www.reddit.com/r/V60/, https://www.reddit.com/r/espresso/, https://www.reddit.com/r/mokapot (wikis and FAQs, real user dial in experiences)
 * Coffee Knowledge presentation (species, processing, drinks): https://www.scribd.com/presentation/511729726/Coffee-Knowledge
 * Barista Cheat Sheet (espresso menu, dialing in, milk texturing, troubleshooting, cleaning): https://irp-cdn.multiscreensite.com/2737510f/files/uploaded/Barista%20Cheat%20Sheet.pdf
