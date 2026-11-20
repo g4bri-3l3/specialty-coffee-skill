@@ -6,3 +6,8 @@ desktop.ini
 
 # Local authoring notes, not part of the published skill
 CLAUDE.md
+
+# Third-party reference images, not ours to redistribute
+*.png
+*.jpg
+*.jpeg

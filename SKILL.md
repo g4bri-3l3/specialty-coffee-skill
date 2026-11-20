@@ -44,6 +44,7 @@ Render with the best tool the environment offers, in this order: a native chart 
 | Tasting or comparing coffees | radar chart of attributes scored 0 to 10: aroma, acidity, sweetness, body, bitterness, aftertaste, clarity, balance |
 | Identifying flavours, learning to taste | aroma wheel sunburst built from the list in "Tasting and cupping", highlighting the categories that fit the coffee |
 | Cold brew ratio, steep time or concentrate dilution | bar chart of dilution ratios (neat, with milk, with tonic), or steep time on x against expected strength, shading the 16 to 20 h fridge window and the 12 to 16 h ambient window |
+| Brew temperature question, or comparing coffees by processing | heatmap of the roast level x processing temperature grid, highlighting the cell the user's coffee falls in; a sequential scale, hotter cells warmer in colour |
 | Resting or freshness advice | days off roast on x, recommended window for the roast level shaded |
 
 Skip the chart when there are no numbers or structure worth seeing (a yes/no answer, a definition, a safety warning).
@@ -131,11 +132,30 @@ Notation "R.N.C" (rotation.number.click) is community shorthand, not 1Zpresso's,
 ## Hario V60 and pour over
 
 General guidance:
-* Ratio 1:15 to 1:17 (60 to 65 g/l is common). Temperature 92 to 100 °C; for light roasts use just off the boil.
+* Ratio 1:15 to 1:17 (60 to 65 g/l is common). Temperature 92 to 100 °C; for light roasts use just off the boil. For a more specific starting point that also accounts for how the coffee was processed, use the roast level × processing grid below rather than this range.
 * Rinse the paper with hot water (removes paper taste, preheats). Pour gently with a gooseneck kettle; avoid pouring onto the paper (bypass).
 * Total time 2:45 to 4:00 for 15 to 30 g. Drawdown far too long (>4:30) with a bitter, muddy cup: grind coarser or reduce agitation. Very fast (<2:30) and sour: grind finer.
 * A flat bed at the end is a good sign of even extraction; grounds high on the walls ("high and dry") mean uneven extraction, add a gentle swirl.
 * Filter choice matters: Hario tabbed and Japanese papers flow faster; Cafec Abaca and T90 filters change flow; Sibarist very fast.
+
+### Brew temperature by roast level and processing (Simon Gautherin, Pull & Pour)
+
+Most temperature advice, including elsewhere in this skill, moves only with roast level. This chart adds the second axis the user's bag actually tells them about: **processing**. Ferment-forward and natural coffees already carry a lot of soluble fruit acidity and volatile character, so they are brewed cooler to keep them from turning boozy, muddled or harsh; washed coffees are denser in the cup's acidity structure and take more heat to open up.
+
+Temperatures in °C for pour over:
+
+| Roast level | Washed | Washed + ferment | Yellow honey | Red honey | Natural | Natural + ferment |
+|---|---|---|---|---|---|---|
+| Very light | 96 | 95 | 94 | 93 | 92 | 91 |
+| Light | 95 | 94 | 93 | 92 | 91 | 90 |
+| Medium light | 94 | 93 | 92 | 91 | 90 | 89 |
+| Medium dark | 93 | 92 | 91 | 90 | 89 | 88 |
+| Dark | 92 | 91 | 90 | 89 | 88 | 87 |
+| Very dark | 91 | 90 | 89 | 88 | 87 | 86 |
+
+The whole grid is one rule, which is worth stating to the user because it scales to coffees not in the table: **start at 96 °C for a very light washed coffee, then subtract 1 °C for each step darker in roast and 1 °C for each step along the processing axis** toward ferment. Both axes carry equal weight, so the anti-diagonals are flat: a light natural and a very dark washed coffee both land at 91 °C, as do a very light natural+ferment and a medium dark yellow honey.
+
+Honest labelling: the grid's perfect regularity shows it is a well-built mnemonic, not measured data, and its author presents it as how he brews. Note also that its roast scale skips plain "medium", going from medium light to medium dark. Use it as a starting point and the direction of travel, then adjust by taste as usual: if the cup is sour and hollow go hotter, if it is harsh, boozy or drying go cooler.
 
 ### Recipe 1: James Hoffmann "Ultimate V60 Technique" (2 cups)
 * 30 g coffee, medium fine (V60 range, Niche about 40 to 50), 500 g water, as hot as possible especially for light roasts (just off the boil). Ratio 60 g/l (1:16.7).
@@ -453,6 +473,8 @@ Quick recipes from CoffeeGeek's how-to guides; link the guide when the user want
 * F1 hybrids (Centroamericano, Starmaya): newer, productive and resilient.
 
 ### Processing (huge effect on flavour)
+
+Processing also shifts brew temperature, not just flavour: see "Brew temperature by roast level and processing" in the V60 section, where each step from washed toward ferment-forward takes about 1 °C off the water.
 * **Washed (wet)**: fruit removed before drying. Clean, clear acidity, terroir and variety expression.
 * **Natural (dry)**: whole cherry dried. Fruity, winey, heavy body, sometimes funky.
 * **Honey / pulped natural**: skin removed, some mucilage left (white, yellow, red, black honey by amount). Sweet, round.
@@ -568,6 +590,7 @@ How to use it:
 * SCA standards (brewing control chart / Golden Cup, water quality): https://sca.coffee/research/coffee-standards
 * EFSA Scientific Opinion on the safety of caffeine (2015), source of the 400 mg/day, 200 mg single dose and 200 mg/day in pregnancy figures: https://www.efsa.europa.eu/en/efsajournal/pub/4102
 * Hario official James Hoffmann V60 recipe (confirms the 2× dose bloom and pour timings): https://www.hario-usa.com/blogs/recipes-and-more-from-friends/james-hoffmann-uitimate-v60-technique
+* Simon Gautherin / Pull & Pour, "Pour over brew temps based on roast level & processing" chart (the roast level x processing temperature grid): https://www.pullandpour.com/
 * Reddit communities: https://www.reddit.com/r/V60/, https://www.reddit.com/r/espresso/, https://www.reddit.com/r/mokapot (wikis and FAQs, real user dial in experiences)
 * Coffee Knowledge presentation (species, processing, drinks): https://www.scribd.com/presentation/511729726/Coffee-Knowledge
 * Barista Cheat Sheet (espresso menu, dialing in, milk texturing, troubleshooting, cleaning): https://irp-cdn.multiscreensite.com/2737510f/files/uploaded/Barista%20Cheat%20Sheet.pdf
