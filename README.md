@@ -1,8 +1,8 @@
-# ☕ Specialty Coffee Guide — a Claude Skill
+# ☕ Specialty Coffee Guide: a Claude Skill
 
 A [Claude Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) that turns Claude into an experienced specialty barista and coffee educator.
 
-Ask a question about brewing and you get a **recipe card** back — dose, grind (in µm *and* clicks on your grinder), water and temperature, ratio, timed pour steps with cumulative weights, total time — followed by what to change if the cup comes out sour, bitter, weak or harsh. One variable at a time, in the order grind → ratio → temperature → technique.
+Ask a question about brewing and you get a **recipe card** back: dose, grind (in µm *and* clicks on your grinder), water and temperature, ratio, timed pour steps with cumulative weights, total time. Then what to change if the cup comes out sour, bitter, weak or harsh. One variable at a time, in the order grind → ratio → temperature → technique.
 
 ## What it covers
 
@@ -20,7 +20,7 @@ Ask a question about brewing and you get a **recipe card** back — dose, grind 
 
 It also draws charts when there is chartable data: step charts for pour schedules, the brew control chart for TDS/extraction yield, radar plots for tasting notes, horizontal bars for grind-size ranges.
 
-Every number is a **range plus a starting point**, never a bare figure, and data tables are labelled by provenance — official manufacturer data vs. community starting points vs. generalizations. Grinder settings are explicitly starting points to be verified by taste.
+Every number is a **range plus a starting point**, never a bare figure, and data tables are labelled by provenance: official manufacturer data, community starting points, or explicit generalizations. Grinder settings are flagged as starting points to be verified by taste.
 
 ## Install
 
@@ -34,7 +34,7 @@ The whole skill is one file, `SKILL.md`. There is nothing to build and nothing t
 ~/.claude/skills/specialty-coffee-guide/SKILL.md
 ```
 
-It is live immediately, no restart. Note that skills enabled on your Claude account also sync down into Claude Code on their own, read-only and one way — so if you install both ways you will see two entries.
+It is live immediately, no restart. Note that skills enabled on your Claude account also sync down into Claude Code on their own, read-only and one way, so if you install both ways you will see two entries.
 
 Then invoke it with `/specialty-coffee-guide`, or just ask a coffee question and let Claude trigger it on its own.
 
@@ -44,10 +44,10 @@ The knowledge is distilled from James Hoffmann, European Coffee Trip's V60 recip
 
 ## Contributing
 
-Corrections and additions are welcome — especially grinder data (µm per click, with the grinder model and how you measured it) and recipes with a named, linkable source. Please edit `SKILL.md` and keep the provenance labelling intact.
+Corrections and additions are welcome, especially grinder data (µm per click, with the grinder model and how you measured it) and recipes with a named, linkable source. Please edit `SKILL.md` and keep the provenance labelling intact.
 
 ## License
 
-[CC BY 4.0](LICENSE) — reuse, adapt and redistribute freely, including commercially, as long as you give credit.
+[CC BY 4.0](LICENSE). Reuse, adapt and redistribute freely, including commercially, as long as you give credit.
 
 This covers the text of the skill as written here. The underlying brewing data is attributed to its sources in the `Sources` section of `SKILL.md`: recipes and figures from James Hoffmann, Tetsu Kasuya, 1Zpresso, La Sosta Specialty Coffee and the others belong to them, and the license on this repo does not change that.
