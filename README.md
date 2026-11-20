@@ -24,50 +24,19 @@ Every number is a **range plus a starting point**, never a bare figure, and data
 
 ## Install
 
-**Option A — the bundle.** Download `specialty-coffee-guide.skill` from this repo and add it as a skill in Claude (Settings → Capabilities → Skills → upload).
+The whole skill is one file, `SKILL.md`. There is nothing to build and nothing to unpack.
 
-**Option B — drop the folder in.** Clone the repo and place `SKILL.md` inside a `specialty-coffee-guide/` folder under your skills directory:
+**On claude.ai (web).** Download `SKILL.md` and upload it under Customize → Skills → `+` → `+ Create skill` → `Upload a skill`. It needs "Code execution and file creation" enabled in Settings → Capabilities, otherwise the upload option is hidden. Skills are account-wide: once uploaded it is available in every conversation, including inside Projects, and can be toggled off individually.
+
+**In Claude Code.** Drop the file into your skills directory, in a folder matching the skill name:
 
 ```
 ~/.claude/skills/specialty-coffee-guide/SKILL.md
 ```
 
+It is live immediately, no restart. Note that skills enabled on your Claude account also sync down into Claude Code on their own, read-only and one way — so if you install both ways you will see two entries.
+
 Then invoke it with `/specialty-coffee-guide`, or just ask a coffee question and let Claude trigger it on its own.
-
-## Repo contents
-
-- `SKILL.md` — the source of truth: YAML frontmatter (`name`, `description`) plus the prompt body.
-- `specialty-coffee-guide.skill` — a zip of the above, with the single entry `specialty-coffee-guide/SKILL.md`. This is the installable bundle.
-
-### Repacking the bundle after editing `SKILL.md`
-
-The two must stay in sync. On Windows, use **pwsh 7** — PowerShell 5.1's `Compress-Archive` writes backslash entry names, which some readers reject:
-
-```powershell
-$stage = "$env:TEMP\scg-pack"
-Remove-Item $stage -Recurse -Force -ErrorAction Ignore
-New-Item -ItemType Directory -Force "$stage\specialty-coffee-guide" | Out-Null
-Copy-Item SKILL.md "$stage\specialty-coffee-guide\"
-Remove-Item specialty-coffee-guide.skill -ErrorAction Ignore
-Add-Type -AssemblyName System.IO.Compression.FileSystem
-[System.IO.Compression.ZipFile]::CreateFromDirectory($stage, "$PWD\specialty-coffee-guide.skill")
-```
-
-On macOS or Linux:
-
-```bash
-rm -f specialty-coffee-guide.skill
-mkdir -p /tmp/scg-pack/specialty-coffee-guide
-cp SKILL.md /tmp/scg-pack/specialty-coffee-guide/
-(cd /tmp/scg-pack && zip -r "$OLDPWD/specialty-coffee-guide.skill" specialty-coffee-guide)
-```
-
-Verify:
-
-```bash
-unzip -l specialty-coffee-guide.skill   # expect specialty-coffee-guide/SKILL.md, forward slash
-unzip -p specialty-coffee-guide.skill specialty-coffee-guide/SKILL.md | diff - SKILL.md
-```
 
 ## Sources
 
@@ -75,7 +44,7 @@ The knowledge is distilled from James Hoffmann, European Coffee Trip's V60 recip
 
 ## Contributing
 
-Corrections and additions are welcome — especially grinder data (µm per click, with the grinder model and how you measured it) and recipes with a named, linkable source. Please edit `SKILL.md`, repack the `.skill`, and keep the provenance labelling intact.
+Corrections and additions are welcome — especially grinder data (µm per click, with the grinder model and how you measured it) and recipes with a named, linkable source. Please edit `SKILL.md` and keep the provenance labelling intact.
 
 ## License
 
