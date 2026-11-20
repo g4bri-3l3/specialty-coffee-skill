@@ -37,6 +37,7 @@ Render with the best tool the environment offers, in this order: a native chart 
 | Hybrid / Switch recipe | same step chart, with valve closed (immersion) intervals shaded and temperature changes annotated |
 | Espresso shot or profile | line chart: x = time (s), y = yield (g), plus pressure (bar) as a second series if known |
 | Lever (Flair, Cafelat Robot) profile | line chart: x = time (s), y = target pressure (bar), phases labelled (preinfusion, ramp, peak, decline) |
+| Espresso tastes wrong and strength is also off | the adjustment compass as a 3x3 grid: x = strength (watery, fine, muddy), y = taste (sour, fine, bitter), each cell naming the grind and yield move, the user's cell highlighted |
 | Comparing recipes (Hoffmann vs 4:6 vs Osmotic vs Hybrid) | multi line chart of cumulative water over time, one series per recipe, normalised to the same dose if needed |
 | Grind size question | horizontal bar chart of µm ranges per method, highlighting the method asked about; optionally the user's setting converted to µm (clicks × µm per click) |
 | Ratio, dose or strength comparisons | bar chart (e.g. 4:6 pour sizes for brighter, balanced, sweeter) |
@@ -110,7 +111,7 @@ This whole table is 1Zpresso's published data, including the clicks per rotation
 Notation "R.N.C" (rotation.number.click) is community shorthand, not 1Zpresso's, e.g. K-Ultra 0.7.5 = 75 clicks from zero. Starting ranges below are community data (Honest Coffee Guide and user consensus), not from 1Zpresso:
 * **K Ultra** (20 µm/click): espresso 0.2.4 to 0.5.0 (start near 0.3.0); moka 0.4.8 to 0.8.6 (start near 0.5.5 to 6.0); AeroPress 0.4.3 to 1.2.6 (typical 5.5 to 7.0); V60 0.5.3 to 0.9.2 (typical 7.0 to 8.5, light roasts often 7.0 to 7.8); French press 0.9.1 to 1.7.0. Very popular all rounder, slightly more fines than pour over specialist burrs, so it gives body.
 * **K Plus / K Pro / K Max** (22 µm/click): V60 0.4.9 to 0.8.4; moka 0.4.4 to 0.7.9; AeroPress 0.3.9 to 1.2.5; pour over 0.5.0 to 1.2.1; French press 0.8.4 to 1.6.6; cold brew 1.0.7 to 1.7.0. Espresso roughly 0.2.0 to 0.4.0.
-* **J Ultra / J Max**: espresso focused, very fine steps; espresso roughly 1 to 1.5 rotations on J Max, adjust to taste.
+* **J Ultra / J Max**: espresso focused, very fine steps. 1Zpresso's own manual puts the espresso range at roughly **1.5 to 2.5 rotations** on the J Max; a user grinding at 3.0.0+ and getting constant channeling with almost no pressure was simply far too coarse. Adjust to taste inside that window.
 * **ZP6 Special**: pour over specialist, very high clarity, low body; not for espresso.
 * **Q2 / J (internal)**: count clicks from zero; pour over usually 1.5 to 2.2 rotations, espresso 0.5 to 0.8 rotations.
 
@@ -292,6 +293,16 @@ Their own adjustments: bitter or mouth drying, especially when the water drains 
 | No crema | stale coffee, too coarse, or very light roast (normal: light roasts have thin crema) |
 | Gushing / spritzing | uneven puck, under dosed basket, distribution |
 
+**The adjustment compass** (widely circulated on r/espresso and r/FlairEspresso). It splits the problem onto two axes instead of one, which is why it resolves cases the table above leaves ambiguous: **grind controls strength**, **yield controls the sour/bitter balance**. Read the cup on both axes, then apply both corrections at once:
+
+| | Watery (low strength) | Strength is fine | Muddy (too strong) |
+|---|---|---|---|
+| **Too sour** | grind finer **and** increase yield | increase yield | grind coarser **and** increase yield |
+| **Balance is fine** | grind finer | you are there | grind coarser |
+| **Too bitter** | grind finer **and** decrease yield | decrease yield | grind coarser **and** decrease yield |
+
+Two caveats that come with the chart and matter: it assumes temperature, total time, preinfusion and pressure profile are **held constant**, which a pump machine mostly forces on you but a lever does not, so on a lever fix those first. And the axes are not truly independent: a grind change moves extraction as well as strength, so expect to iterate rather than land it in one move. Still change one thing at a time when you can.
+
 ### Light roast espresso
 Light roasts are harder: denser beans, less soluble. Options:
 * Grind finer, use a high quality grinder (flat or "unimodal" burrs help), hotter water (94 to 96 °C), longer ratios (1:2.5 to 1:3).
@@ -299,6 +310,14 @@ Light roasts are harder: denser beans, less soluble. Options:
 * **Turbo shot** (popular on r/espresso): coarser grind, about 6 bar, 1:3 in 12 to 20 s. Bright, sweet, low bitterness, fewer channeling problems.
 * **Allongé**: 1:4 to 1:5, tea like, very fruity.
 * Rest longer: 3 to 6 weeks from roast is often better than a week.
+
+**Ratio by roast, the simple version** that r/FlairEspresso regulars converge on: **1:2 for dark, 1:2.5 for medium, 1:3 for light**. The reason given for stretching light roasts is not extraction but balance: it tempers the excessive acidity of very light roasts, at the cost of some body. If a user prefers the thick, punchy, fruit-forward character of espresso, pulling a light roast at 1:2 is a legitimate choice, not a mistake, and some prefer it. Note 1:3 is about the practical maximum on a 40 mm lever group.
+
+**On "light roasts need the hottest water": the community does not actually agree, and the skill should not pretend otherwise.** Reported practice on r/FlairEspresso for the same category of coffee spans roughly 85 °C to water straight off the boil. Several experienced users run max temperature and boiling water successfully; others report that exact combination produced a markedly bitter shot and settled at 90 to 95 °C; one caps very light roasts at 96 °C because above it flavours appear they dislike; another pairs a deliberately low 85 to 88 °C with a slightly coarser grind. Useful framing from the thread: **bitterness in a light roast shot is usually temperature**, so when a shot is bitter rather than sour, drop the water a couple of degrees before touching anything else. Start at 93 to 96 °C, move in 1 to 2 °C steps, and treat "hotter is better for light" as a direction, not a rule.
+
+**Pull soft, pull hard (PSPH)**, a lever profile that unifies turbo and traditional shots: soak the puck at low pressure until a given weight has reached the cup, then pull hard. The length of the soak is what selects the style, a **short soak under 5 s gives a turbo shot, a long soak over 10 s gives a traditional one**, with grind adjusted to suit. Peak around 6 to 7 bar.
+
+**6 bar or 9 bar?** The tradeoff reported consistently: lower pressure channels less and is more repeatable; higher pressure gives more texture and body, which reads as sweetness. Neither is correct in the abstract, so pick for the problem you are having.
 
 ### Manual lever espresso (Flair, Cafelat Robot and similar)
 
@@ -311,7 +330,7 @@ Manual levers have no pump and no boiler: you supply the pressure with your arm 
 * Cafelat Robot: 58 mm, 16 to 22 g, very simple, preheat with hot water.
 
 **Workflow (any manual lever)**
-1. Heat water: just off the boil for light roasts (in the cylinder it will lose a few degrees), 93 to 96 °C for medium, about 90 °C for dark. Flair's own guidance: start at 93 to 96 °C, go down to about 90 °C for darker roasts.
+1. Heat water: 93 to 96 °C for light roasts (in the cylinder it will lose a few degrees), 92 to 94 °C for medium, about 90 °C for dark. Flair's own guidance: start at 93 to 96 °C, go down to about 90 °C for darker roasts. Water straight off the boil works for some people on very light roasts and produces bitterness for others, so see the temperature note under "Light roast espresso" before reaching for it.
 2. Preheat: on non electric models fill the empty brew cylinder with near boiling water (Classic about 100 ml, one pass; do a second pass if shots still taste cool at the end), wait about as long as grinding takes, dump. On a 58, run the preheat for several minutes (10 min for full stability) with the lever raised and plunger at the top. Preheat the portafilter too where possible.
 3. Grind and prep: espresso range, usually a touch coarser than for a pump machine at the same time, but grind finer when using long preinfusion or slow ramps. WDT, level, tamp.
 4. Assemble quickly and fill the cylinder: the puck retains roughly 1 to 1.5 g of water per g of coffee, so fill well above the target yield (in practice fill to the max for the head) and stop on yield with a scale under the cup.
@@ -325,10 +344,37 @@ Manual levers have no pump and no boiler: you supply the pressure with your arm 
 | Recipe | Roast | Dose / yield | Water | Profile |
 |---|---|---|---|---|
 | Classic lever | medium / dark | 18 g / 36 g (1:2) | 90 to 93 °C | 8 s preinfusion at 1 to 2 bar, ramp to 8 to 9 bar, decline to 5 bar near the end; 35 to 45 s |
-| Light roast "blooming" | light | 18 g / 45 to 54 g (1:2.5 to 1:3) | just off the boil, 58 on high | 10 to 15 s preinfusion, optional 10 to 20 s pause at near 0 bar (bloom), then 6 to 9 bar declining to 4 to 6 bar; grind finer |
+| Light roast "blooming" | light | 18 g / 45 to 54 g (1:2.5 to 1:3) | 93 to 96 °C, 58 on high | 10 to 15 s preinfusion, optional 10 to 20 s pause at near 0 bar (bloom), then 6 to 9 bar declining to 4 to 6 bar; grind finer |
 | Turbo / low pressure | light | 18 g / 54 g (1:3) | off the boil | coarser grind, 1 to 2 s preinfusion, flat 6 bar, 15 to 25 s |
 | Ristretto | medium / dark | 18 g / 18 to 27 g (1:1 to 1:1.5) | 90 to 92 °C | short preinfusion, 9 bar, decline |
 | Lungo / allongé style | light | 18 g / 60 g+ (1:3 to 1:4) | off the boil | PRO 2 example from Flair: 20 g with the cylinder at 60 ml gives about 60 g (1:3); lower pressure 6 bar |
+
+
+**Blooming espresso, the Scott Rao style profile in full** (r/FlairEspresso, Flair 58, the most endorsed light roast profile on that sub, with measured numbers). This is the one to give a user who has tried flat profiles on a light roast and got sour, astringent shots.
+
+The distinguishing move is the **hold at zero flow**: after reaching preinfusion pressure the lever is held *perfectly still*, so pressure decays on its own as water seeps through the puck. That is not the same as releasing to 0 bar, and the author reports that releasing the lever instead gave inconsistent results ranging from undrinkable to fine.
+
+* Dose 15 g in a 15 g basket, deep WDT with a 0.4 mm tool, levelled tamp.
+* Water as hot as the machine allows: brewhead on its highest setting, brew water about 98 °C.
+* Ramp to **5 bar over 5 to 10 s**.
+* **Hold the lever motionless for 30 to 40 s** at zero flow. Pressure should decline slowly while water drips from the puck.
+* Ramp to **9 bar over about 5 s**.
+* Then modulate pressure to hold the peak output flow rate reached at 9 bar. Expect to drop the pressure substantially as the puck gives way.
+* Stop at **1:2 to 1:2.2**.
+* Reported result: 8.36% TDS, **19% EY**, rich sweetness, good acidity, very low astringency.
+
+What the same author tried first and rejected, which is as useful as the recipe:
+* **Flat pressure profiles**: puck integrity on light roasts collapses at 8 to 9 bar, the shot channels and runs fast. Drinkable but sour and astringent.
+* **Long low pressure preinfusion (1 to 3 bar, 15 s) then flat**: same failure, flow rate climbs and extraction stays uneven.
+* **Long preinfusion with constant output flow**: better extraction but tends to choke, down to 1 to 1.5 g/s at 9 bar, with puck integrity falling off a cliff at peak pressure.
+
+Variants from the same community, all on light roasts:
+* **Londinium style**: 4 bar preinfusion 10 s, bloom to 0:40, then 9 bar at constant flow, 18 g to 48 g (1:3), 92 °C.
+* **Long bloom, low peak**: 19 g to 50 to 55 g, kettle 97 to 99 °C, ramp to 6 bar over 5 to 10 s, release the lever *slowly*, bloom to 0:40 to 0:45, ramp back to 6 to 8 bar, ease down to 6 bar as the target approaches. Staying at 6 bar after the bloom gives more sweetness and less body; 8 to 9 bar gives more body.
+* **Short and simple**: 18 to 19 g, 30 to 40 s preinfusion at 2 to 3 bar, ramp to 7 to 8 bar, stop at about 44 g (1:2.5), roughly 30 s of flow.
+* **Easy bloom / fast**: 7 bar maximum, fast flowing, 1:3 in about 26 s, 18 g ground very fine on a unimodal grinder.
+
+Practical notes from the same threads: a paper filter above or below the puck is routine for these profiles (an AeroPress filter punched to size). On an electric Flair, **wait about 15 minutes after the preheat beeps** before pulling, so the portafilter is actually at temperature, and consider switching the heater off just before the shot to avoid a rising temperature profile.
 
 **Lever troubleshooting**
 * Lever very hard to push, little or no flow at 10 bar: stop, grind coarser and/or lower the dose; on a Flair, too fine a grind can damage the machine.
@@ -591,6 +637,9 @@ How to use it:
 * EFSA Scientific Opinion on the safety of caffeine (2015), source of the 400 mg/day, 200 mg single dose and 200 mg/day in pregnancy figures: https://www.efsa.europa.eu/en/efsajournal/pub/4102
 * Hario official James Hoffmann V60 recipe (confirms the 2× dose bloom and pour timings): https://www.hario-usa.com/blogs/recipes-and-more-from-friends/james-hoffmann-uitimate-v60-technique
 * Simon Gautherin / Pull & Pour, "Pour over brew temps based on roast level & processing" chart (the roast level x processing temperature grid): https://www.pullandpour.com/
+* r/FlairEspresso light roast threads (ratio by roast level, the temperature disagreement, PSPH, the 6 vs 9 bar tradeoff, preheat timing): https://www.reddit.com/r/FlairEspresso/
+* r/FlairEspresso, Scott Rao style blooming profile on the Flair 58, with measured TDS and EY and the list of profiles the author rejected: search the sub for "blooming profile light roast 58"
+* "Espresso adjustment compass" chart (grind for strength, yield for sour/bitter balance), circulated on r/espresso and r/FlairEspresso
 * Reddit communities: https://www.reddit.com/r/V60/, https://www.reddit.com/r/espresso/, https://www.reddit.com/r/mokapot (wikis and FAQs, real user dial in experiences)
 * Coffee Knowledge presentation (species, processing, drinks): https://www.scribd.com/presentation/511729726/Coffee-Knowledge
 * Barista Cheat Sheet (espresso menu, dialing in, milk texturing, troubleshooting, cleaning): https://irp-cdn.multiscreensite.com/2737510f/files/uploaded/Barista%20Cheat%20Sheet.pdf
