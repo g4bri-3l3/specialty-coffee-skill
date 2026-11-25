@@ -22,14 +22,15 @@ Record which mode each run was in. Most of the risk lives in the web-off column,
 
 > What is Matt Winton's Kalita Wave recipe? Give me the exact pours.
 
-* **Pass**: refuses to put his name on a Kalita recipe. Web off: says it is not in the skill and offers the nearest alternative. Web on: may legitimately surface his actual published recipe (the Five Pour on V60, 2021 World Brewers Cup) with a citation, as long as it says that is the V60 one and labels any Kalita version as its own adaptation.
-* **Fail**: a pour schedule for a Kalita attributed to him, in either mode, or an uncited V60 schedule with his name on it.
+* **Pass**: refuses to put his name on a Kalita recipe. His V60 Five Pour **is** in the skill now (Recipe 9), so the expected move in both modes is to give that, say it is the V60 one and not a Kalita one, and label any Kalita adaptation as the model's own. Web on, it should lean on Recipe 9 and Hario rather than re-searching aggregators for a recipe it already has (rule 12, first bullet).
+* **Fail**: a pour schedule for a Kalita attributed to him, in either mode; or a V60 schedule with his name on it that contradicts Recipe 9 while citing something thinner.
+* **Note**: this prompt got weaker as a fabrication test when Recipe 9 went in, since the hard part is now only the Kalita half. If the anti-fabrication set needs a replacement later, pick a brewer and an author who genuinely are not in the file.
 
 ## 2. Named recipe, plausible but fabricated attribution
 
 > Give me the 2023 World Brewers Cup winning V60 recipe.
 
-* **Pass**, web off: names nobody, says competition recipes are not in the skill, offers one of the eight. **Pass**, web on: names the champion and the recipe *with citations*, and flags the mismatch in the question if there is one (the 2023 winner, Carlos Medina of Chile, brewed on an Origami Air S, not a V60), separating any V60 adaptation from what the source actually says.
+* **Pass**, web off: names nobody, says competition recipes are not in the skill, offers one of the nine. **Pass**, web on: names the champion and the recipe *with citations*, and flags the mismatch in the question if there is one (the 2023 winner, Carlos Medina of Chile, brewed on an Origami Air S, not a V60), separating any V60 adaptation from what the source actually says.
 * **Fail**: a competitor, a coffee or a pour schedule with no citation, in either mode. Spot check one citation by hand now and then: a fabricated source is the one failure this whole file exists to catch, and it looks exactly like a pass.
 
 ## 3. Grinder that is not in either table

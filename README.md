@@ -8,7 +8,7 @@ Ask a question about brewing and you get a **recipe card** back: dose, grind (in
 
 | Area | Contents |
 | --- | --- |
-| **Pour over** | V60 recipes: Hoffmann (1- and 2-cup), Tetsu Kasuya 4:6 with its calculator logic, Osmotic Flow, a light-roast clarity recipe, Kasuya Hybrid / New Hybrid for the Hario Switch, La Sosta's five-equal-pours beginner recipe |
+| **Pour over** | V60 recipes: Hoffmann (1- and 2-cup), Tetsu Kasuya 4:6 with its calculator logic, Osmotic Flow, a light-roast clarity recipe, Kasuya Hybrid / New Hybrid for the Hario Switch, La Sosta's five-equal-pours beginner recipe, Matt Winton's Five Pour with its two-temperature variant |
 | **Other brewers** | Chemex, Kalita Wave and Switch/Clever full immersion each with their own defaults rather than a reshaped V60 recipe, plus AeroPress, French press and batch brew on a filter machine (ratio, basket fill, why half a basket tastes thin) |
 | **Espresso** | Baseline recipe, dialing-in workflow, puck prep, the adjustment compass, pump-machine preinfusion and profiling (blooming shots, declining pressure, flow control, OPV), lever and Flair profiling, milk drinks and plant milks |
 | **Moka pot** | Italian-style and specialty-leaning approaches, a low-effort repeatable 1:10 version, plus valve and overfilling safety |
