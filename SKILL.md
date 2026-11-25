@@ -32,7 +32,10 @@ The knowledge below is distilled from: James Hoffmann (YouTube @jameshoffmann), 
     * **Equipment numbers.** Reservoir volumes, basket capacities, preheat temperatures, model specs: quote them only for the models listed here. Product lines change year to year and the new ones are not in this skill.
     * **Specific coffees.** You have no data on individual farms, lots, a roaster's current menu, or what variety is in someone's bag. Ask them to read the label, or search.
 11. **Carry the label with the number.** The tables below are marked by provenance: manufacturer data, community starting points to verify by taste, or generalizations. Pass that distinction to the user instead of flattening everything into one confident voice. Three levels, never blurred: this is official data / this is where the community converges, verify by taste / this is an extrapolation from principles.
-12. **Search before guessing.** If web access is available and the user asks for a specific roaster's recipe, a newer video, a recipe or a grinder not covered here, or current models and prices, search the sources at the end of this skill and say where the numbers came from. "I don't know, let's look it up" beats a convincing answer.
+12. **Search before guessing, but not instead of knowing.** If web access is available and the user asks for a specific roaster's recipe, a newer video, a recipe or a grinder not covered here, or current models and prices, search the sources at the end of this skill and say where the numbers came from. "I don't know, let's look it up" beats a convincing answer. Three qualifications, because searching has its own failure modes:
+    * **What is already here wins.** Do not search for a recipe this skill already contains: that is how a vetted number gets quietly replaced by a worse one. Search to add what is genuinely missing (the exact timings a recipe here says to get from the video, a model newer than this skill, a roaster's current menu), not to re-derive what is in hand. When a search contradicts this skill, give both and say which is which.
+    * **Prefer the primary source and the list at the end** over whatever ranks first. The author's own page or video, or Hario, 1Zpresso, SCA, Flair, La Sosta, CoffeeGeek, Honest Coffee Guide, outranks a scraped aggregator, a content farm or a forum mirror. If the only sources found are of that kind, say so and give the figure as unconfirmed instead of stacking four of them as though volume were corroboration: four weak pages copying each other are one weak page. A sentence that does not quite make physical sense has usually been copied through one scrape too many, so drop it rather than pass it on.
+    * **Get the attribution exactly right.** Name the author and the publication separately ("Simon Gautherin, writing at Pull & Pour"), never fused into one name that belongs to nobody. A mangled attribution is a small fabrication, and it is the kind this skill is most likely to commit.
 
 Before sending a recipe or a correction, check: every number has a range or a stated starting point; every attribution to a named person is traceable to this skill or to a search just run; any grinder setting names the grinder, its µm per click and the fact that it is a starting point; one variable changed, not three.
 
@@ -137,6 +140,8 @@ This whole table is 1Zpresso's published data, including the clicks per rotation
 | K-Plus, K-Pro, K-Max, ZP6 Special | external | 9 | 90 | 10 | 22 |
 | K-Ultra | external | 10 | 100 | 10 | 20 |
 
+**µm per click is burr travel, not particle size.** It is how far the burrs move apart per click, which is why it converts settings between models cleanly but does **not** convert a setting into a particle size. A grinder at a 600 µm burr gap does not produce 600 µm particles: it produces a distribution around a coarser mode, plus fines. Use µm per click for arithmetic between settings, use the µm ranges in the table above as method targets, and don't tell a user their setting equals a particle size.
+
 1Zpresso's page states µm per click in millimetres (0.022 mm = 22 µm); it carries **no brew-method recommendations at all**, and it predates the newest models, so for a grinder not in the table have the user count numbers and clicks per rotation on their own unit rather than assuming.
 
 1Zpresso does not use the "R.N.C" notation. Its own way of writing a setting is rotations or numbers plus clicks, with the total in brackets: K-Ultra "6.5 numbers = turn clockwise to #6 and 5 clicks. (65 clicks)", J-Ultra "1.5 rotations = turn clockwise a round and 5 numbers. (150 clicks)". When the user quotes a setting, the safest common ground is **total clicks from zero**, since that is unambiguous: convert to µm by multiplying by the µm per click above.
@@ -175,6 +180,8 @@ General guidance:
 * Filter choice matters: Hario tabbed and Japanese papers flow faster; Cafec Abaca and T90 filters change flow; Sibarist very fast.
 
 ### Brew temperature by roast level and processing (Simon Gautherin, Pull & Pour)
+
+The author is **Simon Gautherin**; **Pull & Pour** is the site he publishes on. Keep the two apart when citing it: fusing them into one name invents a person.
 
 Most temperature advice, including elsewhere in this skill, moves only with roast level. This chart adds the second axis the user's bag actually tells them about: **processing**. Ferment-forward and natural coffees already carry a lot of soluble fruit acidity and volatile character, so they are brewed cooler to keep them from turning boozy, muddled or harsh; washed coffees are denser in the cup's acidity structure and take more heat to open up.
 
@@ -489,7 +496,14 @@ Italian classic; makes a strong, concentrated coffee (not espresso: about 1 to 2
 6. **Watch the flow**: it should be a slow, honey coloured stream. When it turns pale/blond and starts to sputter or hiss, remove from heat immediately.
 7. **Stop the brew**: cool the base under cold water or on a wet towel. Stir in the upper chamber (layers differ in strength), serve at once.
 
-Ratio is roughly 1:7 to 1:10 by mass (a 3 cup Bialetti holds about 15 to 17 g coffee and 130 to 150 g water). Typical brew on the stove 2 to 3 minutes with preheated water.
+Ratio is roughly 1:7 to 1:10 by mass. Typical brew on the stove 2 to 3 minutes with preheated water.
+
+**Sizing: measure the pot once, then stop guessing.** The moka is the one brewer where the user does not really choose the ratio, the pot does: the basket holds what it holds and the water stops below the valve. So the two numbers worth having are measured, not looked up, and published figures for the same pot disagree (retailer specs for a 3 cup Bialetti variously say 130, 140 and 150 ml, and Bialetti's own distributor table says 130). Have the user do this once and write it on a sticker:
+1. Fill the base with water to just below the safety valve, pour it into a cup on the scale: that is **W**, their water.
+2. Fill the basket level to the rim without pressing, tip it onto the scale: that is **D**, their dose.
+3. Their ratio is **W / D**, and it is fixed by the pot. For most pots it lands between 1:7 and 1:10.
+
+Then adjust strength the only ways the geometry allows: a smaller or larger pot, a reducer insert, stopping the pour earlier, or diluting in the cup. Orientation only, and not a substitute for measuring: nominal "cups" are about 40 to 50 ml and differ by brand, so a 3 cup pot is roughly 130 ml of water against roughly 13 to 17 g of coffee, and a 6 cup is roughly double. Never add water to reach a target ratio if it would reach the valve: the ratio loses to the valve, every time.
 
 ### Low effort repeatable moka (La Sosta, Italian roaster)
 A shorter version of the same method, for a user who wants a morning routine rather than a protocol. Start from a clean pot, gasket and filter plate free of old residue, with fresh moka grind and bottled or filtered water, not hard tap water.
@@ -506,6 +520,15 @@ Note, because sources conflict here: La Sosta attributes coffee spitting out to 
 * **Spitting only at the very end**, after a full steady flow, is normal and not a fault: it is the signal to take the pot off the heat.
 
 Heat is the confound: too high a flame makes the pot spit with any grind, so lower it first and only then judge the grind by the character of the flow.
+
+### Cremina, the Italian way with sugar
+Standard practice in Italian homes and worth offering whenever a user takes their moka with sugar, instead of treating the sugar as something to talk them out of. It gives a sweeter, rounder drink with a pale foam layer on top.
+* Put the sugar in the cup or a small bowl, about a teaspoon per person.
+* Catch the **first** coffee out of the column, one to two teaspoons, which is by far the most concentrated, and pour it onto the sugar.
+* Beat it hard with a spoon for 30 to 60 s, until it turns pale, thick and creamy.
+* Pour the rest of the coffee over it and stir. The cream rises and sits as foam.
+
+It works because the first fraction is dense in dissolved solids and the beating aerates the sugar syrup. It also solves a real problem: the first and last coffee out of a moka differ a lot in strength, so taking the first fraction out for the cremina and stirring the rest evens out what is left.
 
 ### Moka troubleshooting
 | Problem | Fix |
@@ -752,5 +775,6 @@ Model specifics (capacities, basket sizes, preheat temperatures, which burrs shi
 * Chemex, official brewing instructions and paper types: https://www.chemexcoffeemaker.com/
 * Kalita, Wave brewers and filters: https://www.kalita.co.jp/en/
 * Swiss Water, decaffeination process explained by the processor: https://www.swisswater.com/
+* Bialetti, for moka pot capacities: https://www.bialetti.com/ (note that retailer spec tables disagree with each other on the same pot (130, 140 and 150 ml all appear for the 3 cup Moka Express), which is why this skill tells the user to measure their own pot instead of quoting a figure).
 
 If web access is available and the user asks for a specific roaster's recipe, a newer Hoffmann video, or exact settings for an uncommon grinder, search these sources before answering and say where the numbers come from. The same applies to a named recipe for any brewer, a grinder that is not in the tables, equipment specs, and anything about an individual coffee: see rules 10 to 12 at the top. If there is no web access, say that the number is not in the skill instead of producing one.

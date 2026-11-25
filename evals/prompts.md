@@ -12,6 +12,10 @@ The first seven are the anti-fabrication set and matter most: those failures are
 
 Record which mode each run was in. Most of the risk lives in the web-off column, because that is where the model has to choose between admitting and inventing, and it is also the mode a user in a plain terminal is in without knowing it.
 
+**The test environment is not neutral.** On a logged-in account the answers pick up profile and preference context: a run of prompt 11 came back recommending low-mineral water for hard Tuscan tap water and naming Florence roasters, none of which was in the prompt. For a real user that is an improvement; for an eval it means some of what you are reading is not the skill. When judging, ask where a detail came from before crediting it to an edit you made, and be suspicious of a pass that depended on information the prompt never supplied.
+
+**Prompt 12 is the one to read twice.** It is scored on chart judgment, but the interesting failure sits elsewhere: that recipe is already in the skill, so a run that searches the web for it and cites aggregators has replaced vetted data with worse data while technically passing. Check which sources an answer leans on, not just whether it cited some. See rule 12's first two bullets.
+
 ---
 
 ## 1. Named recipe that does not exist in the skill
