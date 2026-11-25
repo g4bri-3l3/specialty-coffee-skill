@@ -9,18 +9,23 @@ Ask a question about brewing and you get a **recipe card** back: dose, grind (in
 | Area | Contents |
 | --- | --- |
 | **Pour over** | V60 recipes: Hoffmann (1- and 2-cup), Tetsu Kasuya 4:6 with its calculator logic, Osmotic Flow, a light-roast clarity recipe, Kasuya Hybrid / New Hybrid for the Hario Switch, La Sosta's five-equal-pours beginner recipe |
-| **Espresso** | Baseline recipe, dialing-in workflow, puck prep, lever and Flair profiling, milk drinks |
+| **Other brewers** | Chemex, Kalita Wave and Switch/Clever full immersion each with their own defaults rather than a reshaped V60 recipe, plus AeroPress, French press and batch brew on a filter machine (ratio, basket fill, why half a basket tastes thin) |
+| **Espresso** | Baseline recipe, dialing-in workflow, puck prep, the adjustment compass, pump-machine preinfusion and profiling (blooming shots, declining pressure, flow control, OPV), lever and Flair profiling, milk drinks and plant milks |
 | **Moka pot** | Italian-style and specialty-leaning approaches, a low-effort repeatable 1:10 version, plus valve and overfilling safety |
 | **Cold & iced** | Why cold brew and Japanese iced coffee are different choices, then full recipes for each: iced V60 brewed onto ice, cold brew ready-to-drink and as a concentrate with dilution ratios for milk and tonic |
 | **Grind** | General µm reference table, then per-grinder data with µm-per-click so settings convert between grinders (1Zpresso settings in `R.N.C` notation) |
 | **Beans** | Varieties, processing methods, origins, roast levels, and a dedicated light-roast section |
-| **Water** | Target mineral content, why it matters, what to do with what comes out of your tap |
+| **Water** | Target mineral content, why it matters, what to do with what comes out of your tap, and a DIY recipe given as arithmetic (g/l per salt and a 100x concentrate) so you can check it rather than trust it |
+| **Decaf** | Decaffeination processes, why the colour of a decaf bean lies about its roast level, and how it changes grind and extraction |
+| **Preground** | The supermarket-coffee case: which levers are left when the grind is fixed, how stale coffee behaves, and why the grinder recommendation comes last |
 | **Tasting** | SCA cupping protocol, the 13-category aroma wheel, brew control chart targets |
-| **Other** | Aeropress, French press, Chemex, Clever/immersion, equipment basics, caffeine limits (EFSA/FDA) |
+| **Other** | Siphon, Turkish cezve, Vietnamese phin, home cupping parties, espresso drink definitions, equipment basics, caffeine limits (EFSA/FDA) |
 
 It also draws charts when there is chartable data: step charts for pour schedules, the brew control chart for TDS/extraction yield, radar plots for tasting notes, horizontal bars for grind-size ranges.
 
 Every number is a **range plus a starting point**, never a bare figure, and data tables are labelled by provenance: official manufacturer data, community starting points, or explicit generalizations. Grinder settings are flagged as starting points to be verified by taste.
+
+It is also told, at length, **not to make things up**. A coffee recipe is dangerously easy to fabricate: dose, pours and timings in a confident table look identical whether they came from a world champion or from nowhere, and the person reading it has no way to tell. So the skill names the four cases where that happens (a recipe attributed to someone, a setting for a grinder that is not in the tables, equipment specs, claims about a specific bag of coffee), tells Claude to say so and search instead, and repeats that instruction next to the tables where the temptation actually arises. `evals/prompts.md` is the hand-run check that it still works.
 
 ## Install
 
@@ -44,7 +49,7 @@ The knowledge is distilled from James Hoffmann, European Coffee Trip's V60 recip
 
 ## Contributing
 
-Corrections and additions are welcome, especially grinder data (µm per click, with the grinder model and how you measured it) and recipes with a named, linkable source. Please edit `SKILL.md` and keep the provenance labelling intact.
+Corrections and additions are welcome, especially grinder data (µm per click, with the grinder model and how you measured it) and recipes with a named, linkable source. Please edit `SKILL.md` and keep the provenance labelling intact. If you add a topic area, run the prompts in `evals/prompts.md` against the edited skill first: reference data added low in the file has a way of quietly weakening the behavioural rules at the top.
 
 ## License
 

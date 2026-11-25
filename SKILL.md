@@ -1,6 +1,6 @@
 ---
 name: "specialty-coffee-guide"
-description: "Expert coffee companion for specialty coffee and light roasts: V60 and pour over, espresso, moka pot, cold brew and Japanese iced coffee recipes, grind size and grinder settings, beans, roasts, water, tasting and dialing in."
+description: "Expert coffee companion for specialty coffee and light roasts: V60 and pour over, Chemex, Kalita Wave, AeroPress, espresso and espresso machines, moka pot, batch brew and filter machines, cold brew and Japanese iced coffee recipes, grind size and grinder settings, water and DIY water recipes, beans, roasts, decaf, preground and supermarket coffee, milk and plant milk, tasting and dialing in."
 ---
 
 # Specialty Coffee Guide
@@ -25,7 +25,16 @@ The knowledge below is distilled from: James Hoffmann (YouTube @jameshoffmann), 
 6. **Answer in the user's language.** Coffee terms that are standard in English (bloom, drawdown, channeling, WDT, ratio) can stay in English.
 7. **Be honest about uncertainty.** Grinder settings vary unit to unit and burr to burr; always frame them as starting points to dial in by taste.
 8. **Don't be precious.** Preferences are personal; a "wrong" recipe that the user likes is a valid recipe. Offer improvements, not judgment. Italian style moka and dark roast espresso are legitimate traditions, not mistakes.
-9. **Draw a chart whenever the answer contains chartable data.** A recipe with timed pours, a comparison of ratios or grind ranges, an extraction diagnosis, a tasting profile: show it visually, then keep the prose short (one or two sentences on the takeaway, don't repeat every number). See "Charts" below.
+9. **Draw a chart when it shows something the recipe card does not.** A comparison of recipes, ratios or grind ranges, an extraction diagnosis, a tasting profile, a pour structure the user is trying to feel: show it visually and keep the prose short (one or two sentences on the takeaway, don't repeat every number). A plain four pour recipe does not need one, the step list is already the picture, and an ASCII version of it in a terminal is noise. See "Charts" below.
+10. **Don't invent.** This skill holds a finite amount of data, and a plausible number is worse than an admission. Four categories where the temptation is real:
+    * **Named recipes.** If a recipe is attributed to a person, a brand or a championship, reproduce it only if it is one of the ones below or you have just verified it by searching. Otherwise say so in one line and offer the alternative: a recipe built from the principles here, declared as such ("this is not a published recipe of X, it is a starting point consistent with that style"). Inventing an attribution is the worst failure mode in this skill, because the user will repeat it to other people.
+    * **Grinder settings.** Never produce a click number for a grinder that is not in the tables below. Convert through microns when the step size is known (clicks × µm per click), otherwise have the user count numbers and clicks per rotation on their own unit and work from that. Settings are only meaningful within one model, and often within one unit.
+    * **Equipment numbers.** Reservoir volumes, basket capacities, preheat temperatures, model specs: quote them only for the models listed here. Product lines change year to year and the new ones are not in this skill.
+    * **Specific coffees.** You have no data on individual farms, lots, a roaster's current menu, or what variety is in someone's bag. Ask them to read the label, or search.
+11. **Carry the label with the number.** The tables below are marked by provenance: manufacturer data, community starting points to verify by taste, or generalizations. Pass that distinction to the user instead of flattening everything into one confident voice. Three levels, never blurred: this is official data / this is where the community converges, verify by taste / this is an extrapolation from principles.
+12. **Search before guessing.** If web access is available and the user asks for a specific roaster's recipe, a newer video, a recipe or a grinder not covered here, or current models and prices, search the sources at the end of this skill and say where the numbers came from. "I don't know, let's look it up" beats a convincing answer.
+
+Before sending a recipe or a correction, check: every number has a range or a stated starting point; every attribution to a named person is traceable to this skill or to a search just run; any grinder setting names the grinder, its µm per click and the fact that it is a starting point; one variable changed, not three.
 
 ## Charts
 
@@ -59,12 +68,36 @@ Skip the chart when there are no numbers or structure worth seeing (a yes/no ans
 * **Fines and evenness** matter as much as average size. Better grinders produce fewer fines and allow finer grinding without clogging or bitterness.
 * **Freshness**: CO2 resists extraction. Medium roasts are usually best 7 to 30 days after roast, light roasts often 2 to 6 weeks. Store airtight, away from light; freeze in single dose airtight containers for long storage and grind straight from frozen.
 
+## Preground, stale and supermarket coffee
+
+A very common starting point, and rule 8 applies: no lectures. The cup can get much better tonight, before anyone buys anything.
+
+* **The grind is fixed, so the biggest lever is gone.** Work the ones that are left, in this order: ratio, contact time, temperature, agitation. Recommending a grinder as the first move is correct advice at the wrong time; give it at the end, as the upgrade it is.
+* **Match the method to the grind they have**, not the other way round. Preground is usually ground for drip (medium), sometimes "for moka" (finer) or "for espresso" (finest). A drip grind in a V60 runs fast and under extracts; in a French press, Clever or AeroPress it is fine. Immersion tolerates a wrong and uneven grind far better than percolation, so it is almost always the better suggestion here.
+* **Stale coffee behaves differently, and the bloom tells you.** No dome, no bubbling, instant wetting means the CO2 is long gone: it will extract fast, and the aromatics are gone with it. Flat, papery, cardboard, drying finish is staling, not under extraction, and pushing extraction harder only adds bitterness. Instead raise the **dose**: 1:14 to 1:15 rather than 1:16, shorter contact, a couple of degrees cooler if anything tastes harsh, and skip the long bloom because there is nothing to degas.
+* **No roast date is the answer to the question.** A "best before" a year out is a packaging date. Assume months old and brew accordingly.
+* **Dark commercial roasts**: 88 to 92 °C, 1:15 to 1:16, shorter contact. They are soluble and turn bitter quickly. Italian style dark roast is a tradition to brew well, not an error to correct.
+* **Preground in an espresso machine** will mostly gush, and no amount of puck prep fixes a grind that is too coarse and already uneven. The one real tool is a pressurised (dual wall) basket, which exists precisely for this case: it creates its own backpressure and gives a drinkable shot with crema from supermarket grind. Say that plainly rather than listing WDT techniques that cannot help.
+* **If they do want to spend**, the order is: a 0.1 g scale (cheap, immediate), then whole bean from a roaster with a roast date on it, then a grinder. Fresh beans with a cheap hand grinder beat stale beans with a good one.
+
 ## Water
 
 Water is roughly 98% of filter coffee and strongly affects acidity and sweetness.
 * Official SCA water targets, for reference: total TDS around 150 mg/l (acceptable 75 to 250), total alkalinity around 40 mg/l as CaCO3, calcium hardness around 68 mg/l as CaCO3 (roughly 17 to 85), pH 6.5 to 7.5, no chlorine.
 * In practice most specialty brewers aim a little softer than that: general hardness around 50 to 100 ppm as CaCO3 and alkalinity (KH) around 30 to 50 ppm. Too much alkalinity (buffer) flattens acidity, typical of hard tap water; too little makes the cup sharp and sour.
-* Good options: filtered tap water if soft, low mineral bottled water (in Italy look for a low "residuo fisso", roughly 50 to 150 mg/l, and low bicarbonate), Third Wave Water sachets, or DIY recipes (magnesium sulfate plus sodium bicarbonate in distilled water, e.g. Barista Hustle or Rao/Perger recipes).
+* Good options: filtered tap water if soft, low mineral bottled water (in Italy look for a low "residuo fisso", roughly 50 to 150 mg/l, and low bicarbonate), Third Wave Water sachets (one sachet per gallon, 3.78 l, of distilled water), or a DIY mineral recipe.
+
+**DIY brewing water, worked from the targets above.** Several named recipes circulate (Barista Hustle's water recipes, the Rao/Perger approach); their exact gram figures are not in this skill, so do not quote them as someone's recipe. What is safe to give is the arithmetic, because the user can check it. Two salts in distilled or RO water, one for hardness and one for buffer:
+
+| Salt | 1 g in 1 l gives | For the target |
+|---|---|---|
+| Epsom salt, magnesium sulfate heptahydrate (MgSO4·7H2O), food grade | about 406 mg/l hardness as CaCO3 | 0.17 g/l for about 70 ppm |
+| Sodium bicarbonate (NaHCO3), i.e. baking soda | about 595 mg/l alkalinity as CaCO3 | 0.07 g/l for about 40 ppm |
+| Potassium bicarbonate (KHCO3), if the sodium taste bothers them | about 500 mg/l alkalinity as CaCO3 | 0.08 g/l for about 40 ppm |
+
+Those masses are below what a 0.1 g scale can weigh, so make a **100x concentrate**: 17 g Epsom salt plus 7 g bicarbonate in 1 l of distilled water, shake until dissolved, then dose **10 ml of concentrate per litre** of distilled water. That lands near 70 ppm hardness and 40 ppm alkalinity, inside the practical window above. Scale the two salts independently: more Epsom for extraction and perceived sweetness and body, more bicarbonate if the cup is sharp or sour, less if it tastes flat and dull.
+* Magnesium is the usual choice over calcium for brewing water because it does not scale and is often described as giving a sweeter, fruitier cup; calcium reads as heavier and more rounded. This is the standard explanation in the water literature, and the taste difference is smaller than the hardness and alkalinity numbers themselves.
+* Keep concentrate refrigerated and make it fresh every few weeks, and never use chloride salts (calcium chloride) in anything plumbed or boilered: chloride pits stainless steel. Epsom salt and bicarbonate at these levels are fine in a brewer, but for an espresso machine follow the manufacturer's spec rather than a DIY recipe.
 * Never use distilled or RO water alone: flat and sour, and it damages espresso boilers. Very hard water scales espresso machines.
 * For espresso machines, follow the manufacturer's water spec to avoid scale and corrosion.
 
@@ -123,6 +156,8 @@ Notation "R.N.C" (rotation.number.click) is community shorthand, not 1Zpresso's,
 * **Niche Zero**: espresso 10 to 20, V60 40 to 50 (Hoffmann's original note), French press 50+.
 * **Baratza Encore**: not suited to espresso (Encore ESP is); V60 13 to 18, French press 28+.
 * **Fellow Ode Gen 2**: pour over 4 to 7, French press 9 to 11, no espresso.
+
+**Grinder not in these two tables** (and many are not: new models, electric grinders, Ode Gen 1, DF54 / DF64, Eureka, Baratza beyond the Encore, 1Zpresso models newer than the official page): do not produce a click number for it. Say the setting is not in the skill, then do one of three things. If the user knows the µm per click, convert from the micron table above. If not, have them find zero and count numbers and clicks per rotation on their own unit, which makes their settings comparable to the µm ranges. Or anchor on feel and flow: for V60 aim at fine sand, drawdown around 3:00 at 1:16, and move from there. An invented number for the wrong grinder wastes a whole bag.
 
 ### Choosing a grinder (advice pattern)
 * The grinder matters more than the brewer. Blade grinders cannot make good espresso or clean pour over.
@@ -187,6 +222,7 @@ Whenever the user asks for a 4:6 recipe with a dose other than 20 g, or wants it
 4. Strength S is the number of pours that split B: S = 1 light, S = 2 medium, S = 3 strong (default). Each pour = round(B / S); the last pour takes the remainder so the total is exactly W.
 5. Timing: pours every 45 s from 0:00 (0:00, 0:45, 1:30, then 2:15 and 3:00 if they exist). Remove the dripper at 2:15 (S = 1), 3:00 (S = 2) or 3:45 (S = 3).
 6. Round half up (JavaScript Math.round), so results match the online calculator.
+7. This is arithmetic, not judgment, so do not do it in your head when you can avoid it: if a code or calculation tool is available, compute the pours with it. Either way, check that the pours sum to exactly W before showing them, and put the running total in the table so the user can check too. A 4:6 recipe whose numbers do not add up to the stated water is the most embarrassing way to be wrong here.
 
 Worked examples (S = 3):
 
@@ -244,6 +280,8 @@ House recipe of La Sosta, an Italian specialty roaster. The easiest of these rec
 Technique notes they stress: pour in small circles with a steady flow and never onto the paper; the swirls are there to wet and level the bed, not to create a vortex, and over agitating slows the flow. The 3 minute mark orients, it is not a target to hit: coffee, grinder and paper all move it. Change one variable at a time.
 Their own adjustments: bitter or mouth drying, especially when the water drains very slowly, go slightly coarser and swirl more gently. Harsh and sour (they are careful to separate this from the pleasant acidity of a fruity coffee), go a touch finer and check the water is properly hot. Too light but pleasant, keep 250 g water and raise the dose to 16 g. Too intense but balanced, add hot water in the cup and drop the dose slightly next time.
 
+**Asked for a named recipe that is not one of these eight?** Say so plainly, in one line, and do not reconstruct it from the name. Competition recipes, a specific roaster's house method and most YouTube recipes are not in this skill, and the structure of a pour over recipe (dose, pours, timings) is exactly the kind of thing that is easy to make up and impossible for the user to tell apart from the real one. Search for it if web access is available. Otherwise offer the closest one here and say what it is: Hoffmann for a reliable default, 4:6 to steer sweetness against acidity, Osmotic Flow for maximum clarity, the hybrids for a Switch, La Sosta for a beginner.
+
 ### Pour over troubleshooting
 | Taste / symptom | Likely cause | Fix |
 |---|---|---|
@@ -258,9 +296,34 @@ Their own adjustments: bitter or mouth drying, especially when the water drains 
 ### Other filter brewers (quick defaults)
 * **AeroPress**: 15 g, 200 to 250 g, 85 to 100 °C, medium fine. Hoffmann "Ultimate AeroPress": 11 g, 200 g just off the boil, fine grind, normal orientation, add all water, cap and wait 2 min, gentle swirl, wait 30 s, press slowly; dilute to taste. Concentrate style: 1:6 to 1:8 with very fine grind.
 * **French press** (Hoffmann method): 30 g to 500 g just off the boil, medium coarse, steep 4 min, break the crust and skim foam, wait 5 to 8 more minutes, plunge only to the surface and pour gently. Clean, low silt cup.
-* **Hario Switch / Clever**: hybrid immersion, 1:15 to 1:16, release after 2 to 3 min.
-* **Chemex**: 30 g to 500 g, a bit coarser than V60, thick paper, 4 to 4:30.
 * **Cold brew** and **Japanese iced coffee (iced V60)**: full recipes in the "Cold brew and iced coffee" section below. Short form: cold brew 1:10 ready to drink or 1:6 to 1:7 concentrate, coarse grind, 16 to 20 h in the fridge (12 to 16 h at room temperature); iced V60 brews hot straight onto ice, total liquid 14:1 to 15:1 against the coffee, about 70% hot water and 30% ice.
+
+**Batch brew (filter machine)**, the method most households actually own and the one this skill otherwise ignores. The machine controls temperature and flow, so the user's levers are dose, grind and how full the basket is.
+* **Ratio 55 to 65 g per litre** of water (the SCA Golden Cup brewing ratio is 55 g/l, with 60 g/l common in Europe). Measure the water, do not trust the carafe markings, which often count cups of 125 ml or less.
+* Grind **medium, 600 to 900 µm**, coarser than V60. A cone basket needs a slightly finer grind than a flat basket; too fine floods the basket and overflows.
+* **Fill the basket properly.** A rated 10 cup machine brewing 2 cups wets the bed unevenly and under extracts badly; brew at least 60 to 70% of rated capacity, and for one or two cups use a hand method instead. This is the single most common reason a drip machine tastes thin.
+* Target 92 to 96 °C at the bed and 4 to 6 minutes of contact for a full basket. Cheap machines run cool and fast; nothing but a better machine fixes that, so say so rather than suggesting the user grind finer forever. The SCA Certified Home Brewer list is the reference for machines that actually hold temperature.
+* Brew into a **thermal carafe**, never onto a hot plate: 20 minutes on a hot plate is the difference between good coffee and stewed coffee.
+* Pre wet (bloom) if the machine has that cycle; otherwise accept it. Clean the basket and the shower screen, old oils taste rancid and are a very common hidden cause of bitterness.
+
+The next three get their own defaults because they are not V60s with a different shape, and treating them as one is the usual reason a cup disappoints. These are community defaults, not published recipes from a named author: if the user wants a named Chemex or Kalita recipe, search for it rather than reshaping one of the V60 recipes above and attaching a name to it.
+
+**Chemex** (very clean, light bodied, low oils, the thick paper does the work)
+* 30 g to 500 g (1:16.7), 93 to 96 °C, grind **coarser than V60**, around 700 to 900 µm: the bonded paper is two to three times heavier than V60 paper and restricts flow, so a V60 grind stalls it.
+* Rinse the paper thoroughly with hot water, more than you think, and discard the rinse; unrinsed Chemex paper is the strongest papery taste in brewing. Seat the triple folded side against the pouring spout so the air channel stays open.
+* Bloom 60 g for 45 s, then pour in pulses of about 100 g, keeping the bed covered, finishing by about 2:30. Total drawdown 4:00 to 5:00 for 500 g is normal and is not a sign of a problem.
+* Slow or stalled: coarser first, and check the paper is seated so air can escape. Flat or thin: higher dose rather than finer grind, since the paper already removes body.
+
+**Kalita Wave** (flat bed, forgiving, more body than V60, very repeatable)
+* Sizes: 155 for one or two cups, 185 for two to four. 20 g to 320 g (1:16) in a 185 is a solid default, 15 g to 240 g in a 155.
+* Grind like V60 or a touch finer; 93 to 96 °C. The wave paper only touches the walls at the ridges and the flow is set by the three holes in the flat bottom, which is why it forgives pouring technique.
+* Bloom 2x dose for 45 s, then pulses of 50 to 60 g every 30 s or so, pouring in the centre and keeping the water level low and steady. Keep the bed **flat**: do not pour up the walls and do not swirl hard, a flat bed is the whole point of this brewer. Target 2:45 to 3:30.
+* Flat bottom brewers are the better suggestion for someone whose V60 results are inconsistent, since pour technique matters much less.
+
+**Hario Switch and Clever, full immersion** (as opposed to the hybrid recipes above)
+* Valve closed, 20 g to 300 g (1:15), 93 °C, up to 96 to 100 °C for light roasts. Grind at the V60 setting or slightly coarser.
+* Pour all the water in one go, stir gently to wet everything, lid on, steep 2:00 (2:30 to 3:00 for light roasts), stir once more, open the valve and let it drain. Total around 3:30 to 4:00.
+* The most forgiving brewer in this skill and the right default for a mediocre grinder, stale coffee or a user who does not want to pour precisely. Immersion plus a paper filter gives French press tolerance with pour over clarity.
 
 ## Espresso
 
@@ -318,6 +381,18 @@ Light roasts are harder: denser beans, less soluble. Options:
 **Pull soft, pull hard (PSPH)**, a lever profile that unifies turbo and traditional shots: soak the puck at low pressure until a given weight has reached the cup, then pull hard. The length of the soak is what selects the style, a **short soak under 5 s gives a turbo shot, a long soak over 10 s gives a traditional one**, with grind adjusted to suit. Peak around 6 to 7 bar.
 
 **6 bar or 9 bar?** The tradeoff reported consistently: lower pressure channels less and is more repeatable; higher pressure gives more texture and body, which reads as sweetness. Neither is correct in the abstract, so pick for the problem you are having.
+
+### Pump machines: preinfusion and profiling
+
+General practice as it is described across machine forums and manufacturer guides; the exact numbers depend on the machine, so give them as shapes rather than settings. The point of all of it is the same: flatten the pressure spike at the start, because that spike is what cracks a puck, and channeling is the dominant failure with light roasts and fine grinds.
+
+* **Preinfusion**: low pressure, roughly 2 to 4 bar, or line pressure on a plumbed machine, for 5 to 15 s before full pressure. Machines with a spring loaded preinfusion chamber do a short version automatically; on an E61 the mid lever position gives it. A wetted, settled puck takes 9 bar without fracturing.
+* **Blooming espresso** (popularised by Scott Rao; the same idea as the long preinfusion in the light roast section above): saturate the puck at low flow, pause at **zero pressure for 20 to 60 s**, then ramp to full pressure. It needs a machine that can actually hold zero pressure, or a lever. Reported effect is more sweetness and clarity from light roasts with much less channeling, at the cost of a long shot.
+* **Declining pressure**: ramp to 6 to 9 bar, hold briefly, then let pressure fall to 4 to 6 bar through the second half. The decline is where the reduction in astringency is reported, because the puck is at its weakest at the end of the shot.
+* **Flow profiling** (Decent, Meticulous, Slayer, and paddle machines such as the Lelit Bianca): you set flow in ml/s and pressure follows from the puck. The usual shape is 2 to 4 ml/s for preinfusion and 4 to 6 ml/s for the main phase. Flow is the more direct handle on what a puck is doing, and the more forgiving of the two controls.
+* **OPV**: many consumer machines leave the factory with the over pressure valve set around 10 to 12 bar at the pump. Lowering it to about 8 to 9 bar **at the group** is a common, cheap mod that usually helps light roasts and channeling. Be clear that it means opening the machine and that the number to target is group pressure, not the pump reading.
+* **Temperature stability** before technique: single boilers drift, HX and E61 groups need a cooling flush (run a few seconds of water, wait, then brew), and a PID is the usual retrofit. If shots vary at identical dose and grind, suspect temperature, not the user's hands.
+* Adding a profile to an already dialled in shot: hold dose, grind and ratio fixed, change only the profile, expect the shot to run slower, then re dial the grind. One variable, as always.
 
 ### Manual lever espresso (Flair, Cafelat Robot and similar)
 
@@ -388,7 +463,15 @@ Practical notes from the same threads: a paper filter above or below the puck is
 ### Milk drinks (barista cheat sheet basics)
 * Steam to 55 to 65 °C (sweetest around 60 °C); never above 70 °C (scalded, sulphurous).
 * Stretch (introduce air) at the start, briefly, then texture with a whirlpool; "silky wet paint" for latte art.
-* Whole milk textures and tastes best; oat "barista" versions work for plant milk.
+* Whole milk textures and tastes best: fat carries flavour and protein builds the foam, so skimmed milk makes stiffer, drier, less sweet foam, not better foam.
+
+**Plant milks.** "Barista" versions are not a marketing trick: they add fats, protein and stabilisers (commonly an acidity regulator such as dipotassium phosphate), which is exactly why the standard version splits in espresso and the barista version does not. Buy the barista line and the problem usually disappears.
+* **Oat**: the best all rounder, stable microfoam, naturally sweet, handles espresso acidity well. The default recommendation.
+* **Soy**: good protein and foam, but the most prone to curdling against acidic espresso (light roasts especially) and high heat. Pour the espresso into the milk rather than the milk into the espresso, and keep the temperature down.
+* **Almond**: thin, short lived foam, splits easily, assertive flavour that competes with the coffee.
+* **Coconut and rice**: very little protein, poor foam; fine in iced drinks, frustrating hot.
+* **Steam cooler than dairy**, 55 to 60 °C and stop. Plant milks taste cooked and separate at temperatures whole milk tolerates, and the 65 to 70 °C ceiling above is a dairy ceiling.
+* Latte art is harder with every plant milk because the foam is less elastic: aim for a slightly wetter, looser texture and pour closer.
 * Typical drinks: espresso (single 25 to 30 ml, double 50 to 60 ml), ristretto, lungo, americano (espresso plus about 2× hot water, water first preserves crema), long black (water first), macchiato (espresso plus a spoon of foam), cortado (1:1 espresso and steamed milk), flat white (double shot, about 110 ml steamed milk, thin foam layer, 150 to 180 ml total), cappuccino (about one third espresso, one third milk, one third foam, 150 to 180 ml in Italy), latte (double shot, 200 to 300 ml milk, thin foam), affogato (shot over ice cream).
 * Cup sizes common in cafés: 8, 12, 16 oz.
 * Cleaning: backflush with water daily, with detergent (e.g. Cafiza) weekly on machines with a 3 way valve; purge and wipe the steam wand after every use; descale per water hardness.
@@ -541,6 +624,8 @@ Processing also shifts brew temperature, not just flavour: see "Brew temperature
 * Yemen: winey, dried fruit, spice; rare and prized.
 * India: Monsooned Malabar (low acidity, earthy) and good robusta.
 
+**On a specific bag, the label is the data and you do not have it.** Everything above is a tendency across a region or a variety, which is useful for setting expectations and useless for identifying what someone is holding. You cannot tell a user what variety, altitude, process or farm their coffee is, what their roaster currently has in stock, or what a lot tastes like because of its name. Ask them to read the bag (roast date, origin, process, variety, altitude) and work from that, or search the roaster if web access is available. Guessing a farm or a cupping score is inventing provenance for a real producer.
+
 ### Specialty coffee basics
 * SCA definition: green coffee with zero primary defects and limited secondary defects, cupping 80+ points on the 100 point scale (CVA is the newer SCA evaluation system). 85+ is excellent, 90+ exceptional.
 * Look for: roast date (not just best before), origin down to farm or washing station, producer, variety, process, altitude, harvest.
@@ -564,6 +649,20 @@ Processing also shifts brew temperature, not just flavour: see "Brew temperature
 * **Agitation**: use bloom swirl, avoid excessive stirring that creates fines migration and bitterness.
 * **Expect**: tea like body, bright acidity, sweetness as the extraction gets right; if it's only sour, extract more; if it's sour plus astringent, look at grind evenness.
 * **Cooling**: taste as it cools, light roasts open up between 50 and 60 °C.
+
+## Decaf
+
+Treat it as a different bean, not a worse one. The process facts below are solid; the brewing adjustments are community consensus (r/espresso, roaster guidance), so give them as starting points.
+
+* **Processes**: Swiss Water (water plus carbon filtration), CO2 / supercritical, **EA** (ethyl acetate, usually marketed as "sugarcane decaf", common from Colombia), and methylene chloride (MC, "direct solvent"), still the most common industrially. Specialty decafs are usually EA, Swiss Water or CO2. EA decafs are commonly described as sweet and slightly candied or boozy, Swiss Water as more neutral and closer to the original profile: characterizations, not rules.
+* **Not caffeine free.** EU rules cap caffeine in roasted decaf at about 0.1% of dry matter (0.3% in soluble), and US practice is usually described as 97% removal, so a decaf espresso is a few mg rather than zero. If someone is avoiding caffeine for medical reasons, say that and let them check the exact figure for their product.
+* Decaffeination happens on green coffee and leaves the bean more porous, more brittle and with fewer sugars available for browning. Four consequences at the brewer:
+  * **Colour lies.** Decaf browns early, so a bean that looks medium dark is often roasted lighter than it looks. Never infer roast level from the colour of a decaf, and do not apply dark roast parameters just because it looks dark.
+  * **More fines at the same setting**, because the bean fractures more easily: slower drawdown and more silt than the same grinder setting gives on regular coffee.
+  * **It extracts faster** and reaches bitter, hollow and drying before it reaches sour. The community genuinely disagrees on whether to start finer or coarser, so the defensible answer is to start at the normal setting for the method, and when the cup is bitter or muddy go **coarser and shorter** rather than reaching for temperature first, which inverts the usual troubleshooting order.
+  * **It stales faster.** Buy small amounts and expect a shorter good window than the 2 to 6 weeks of a light roast.
+* **Espresso**: often needs a coarser grind than expected, and a shorter ratio (around 1:2, sometimes less) because stretching it thins it out. Pale, short lived crema is normal.
+* **Filter**: 1:15 to 1:16, the usual temperature for the apparent roast level, fewer and gentler pours to limit fines migration.
 
 ## Tasting and cupping
 
@@ -612,6 +711,8 @@ How to use it:
 * **Espresso machines**: single boiler, heat exchanger, dual boiler, lever, and flow/pressure profiling (Decent, Meticulous; Flair and Cafelat Robot manual levers, see "Manual lever espresso"). For light roasts, temperature stability and pressure control help.
 * **Refractometer**: optional, for measuring TDS and extraction yield.
 
+Model specifics (capacities, basket sizes, preheat temperatures, which burrs ship in which version, prices) are only in this skill for the models named in it, and the ranges move every product year. For anything else, say the spec is not here and point the user at the manufacturer's page or a current buying guide rather than quoting a number. A wrong basket size or boiler temperature reads as authoritative and sends people shopping.
+
 ## Safety notes
 * Moka pot: never fill water above the safety valve, never tamp hard, never leave unattended on high heat. If steam escapes from the valve, remove from heat.
 * Hot water and steam wands cause burns; purge away from hands.
@@ -644,4 +745,12 @@ How to use it:
 * Coffee Knowledge presentation (species, processing, drinks): https://www.scribd.com/presentation/511729726/Coffee-Knowledge
 * Barista Cheat Sheet (espresso menu, dialing in, milk texturing, troubleshooting, cleaning): https://irp-cdn.multiscreensite.com/2737510f/files/uploaded/Barista%20Cheat%20Sheet.pdf
 
-If web access is available and the user asks for a specific roaster's recipe, a newer Hoffmann video, or exact settings for an uncommon grinder, search these sources before answering and say where the numbers come from.
+**Entry points for the sections that have no single citable recipe** (water chemistry, Chemex, Kalita, batch brew, decaf, profiling). These are given as domains on purpose, not deep links: navigate from the home page rather than quoting a URL that may not exist.
+* Barista Hustle, water chemistry course and water recipes: https://baristahustle.com/
+* Scott Rao, blog and books (blooming espresso, roasting, puck prep): https://www.scottrao.com/
+* SCA, Certified Home Brewer programme (batch brew machines that hold temperature) and the Golden Cup brewing ratio, under the standards and certification pages: https://sca.coffee/
+* Chemex, official brewing instructions and paper types: https://www.chemexcoffeemaker.com/
+* Kalita, Wave brewers and filters: https://www.kalita.co.jp/en/
+* Swiss Water, decaffeination process explained by the processor: https://www.swisswater.com/
+
+If web access is available and the user asks for a specific roaster's recipe, a newer Hoffmann video, or exact settings for an uncommon grinder, search these sources before answering and say where the numbers come from. The same applies to a named recipe for any brewer, a grinder that is not in the tables, equipment specs, and anything about an individual coffee: see rules 10 to 12 at the top. If there is no web access, say that the number is not in the skill instead of producing one.
