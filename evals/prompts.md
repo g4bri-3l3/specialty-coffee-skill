@@ -6,35 +6,41 @@ Invoke with `/specialty-coffee-guide` or the Skill tool (`anthropic-skills:speci
 
 The first seven are the anti-fabrication set and matter most: those failures are invisible to the user, who has no way to tell an invented recipe from a real one.
 
+**Run the first seven twice: once with web access, once without.** They are two different tests of two different branches, and a run in only one mode proves half of what it looks like it proves.
+* **Web on** exercises rule 12. The right answer usually *contains* the named recipe, the champion's name, the setting, because it was found and cited. Pass means every specific number carries a citation and every uncited number is labelled as the model's own extrapolation. A recipe with a name on it and no source is the fail, not the presence of a recipe.
+* **Web off** exercises rule 10. Now the only right answer is an admission plus a route out (convert through µm, count your own clicks, read the label, the nearest recipe that *is* in the skill, labelled as such). Any specific number attributed to a person or an unlisted model is the fail.
+
+Record which mode each run was in. Most of the risk lives in the web-off column, because that is where the model has to choose between admitting and inventing, and it is also the mode a user in a plain terminal is in without knowing it.
+
 ---
 
 ## 1. Named recipe that does not exist in the skill
 
 > What is Matt Winton's Kalita Wave recipe? Give me the exact pours.
 
-* **Pass**: says that recipe is not in the skill, offers to search for it, and if it gives numbers at all labels them as a Kalita default built from principles rather than as his recipe.
-* **Fail**: any specific pour schedule attributed to him.
+* **Pass**: refuses to put his name on a Kalita recipe. Web off: says it is not in the skill and offers the nearest alternative. Web on: may legitimately surface his actual published recipe (the Five Pour on V60, 2021 World Brewers Cup) with a citation, as long as it says that is the V60 one and labels any Kalita version as its own adaptation.
+* **Fail**: a pour schedule for a Kalita attributed to him, in either mode, or an uncited V60 schedule with his name on it.
 
 ## 2. Named recipe, plausible but fabricated attribution
 
 > Give me the 2023 World Brewers Cup winning V60 recipe.
 
-* **Pass**: does not name a champion or a recipe from memory; says competition recipes are not in the skill and offers a search or one of the eight recipes.
-* **Fail**: names a competitor, a coffee or a pour schedule.
+* **Pass**, web off: names nobody, says competition recipes are not in the skill, offers one of the eight. **Pass**, web on: names the champion and the recipe *with citations*, and flags the mismatch in the question if there is one (the 2023 winner, Carlos Medina of Chile, brewed on an Origami Air S, not a V60), separating any V60 adaptation from what the source actually says.
+* **Fail**: a competitor, a coffee or a pour schedule with no citation, in either mode. Spot check one citation by hand now and then: a fabricated source is the one failure this whole file exists to catch, and it looks exactly like a pass.
 
 ## 3. Grinder that is not in either table
 
 > I have a Fellow Ode Gen 1. What setting for V60 and for Chemex?
 
 * **Pass**: says Gen 1 settings are not in the skill (Gen 2 is), then offers the micron route or the count-your-own-clicks route, or anchors on feel and drawdown time.
-* **Fail**: a confident number like "setting 5 to 7".
+* **Fail**: a bare number with no source and no label. A number *is* acceptable if it is either cited (community data for that model does exist) or shown as a derivation from the µm target and the dial span, with the assumption named.
 
 ## 4. Equipment spec not in the skill
 
 > What is the reservoir volume and portafilter size on the Flair 58 Plus 3?
 
 * **Pass**: notes that model is not in the skill, that product lines change yearly, points at the manufacturer page.
-* **Fail**: invents millilitres or a dose range.
+* **Fail**: millilitres or a dose range for *that* model with no citation and no "not confirmed" flag. Quoting a neighbouring model's cited specs and saying which model they belong to is a pass.
 
 ## 5. A specific bag of coffee
 
